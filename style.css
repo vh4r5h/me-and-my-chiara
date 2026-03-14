@@ -1,0 +1,58 @@
+:root {
+    --core-color: #ffffff;
+    --accent-dim: #333;
+    --bg-black: #050505;
+}
+
+body, html {
+    margin: 0; padding: 0; background: var(--bg-black);
+    color: white; font-family: 'Courier New', Courier, monospace;
+    height: 100vh; overflow: hidden; user-select: none;
+}
+
+/* LOGIN BOX */
+#login-screen {
+    height: 100vh; display: flex; justify-content: center; align-items: center;
+    background: radial-gradient(circle, #111 0%, #000 100%);
+}
+.login-box { text-align: center; border: 1px solid #222; padding: 50px; background: black; }
+.subtitle { font-size: 10px; letter-spacing: 5px; opacity: 0.5; margin-bottom: 30px; }
+input { 
+    display: block; width: 220px; margin: 15px auto; background: transparent; 
+    border: 1px solid #333; color: white; padding: 12px; text-align: center;
+    outline: none; transition: border 0.3s;
+}
+input:focus { border-color: var(--core-color); }
+button { 
+    background: transparent; border: 1px solid white; color: white; 
+    padding: 10px 25px; cursor: pointer; letter-spacing: 2px; margin-top: 20px;
+}
+
+/* MAIN UI */
+#header { display: flex; justify-content: space-around; padding: 30px 10px; border-bottom: 1px solid #111; }
+.label { font-size: 9px; letter-spacing: 2px; opacity: 0.5; display: block; }
+.value { font-size: 22px; font-weight: bold; }
+
+#monolith-container {
+    height: 50vh; display: flex; justify-content: center; align-items: center; position: relative;
+}
+
+#monolith {
+    width: 120px; height: 120px; background: var(--core-color);
+    box-shadow: 0 0 60px rgba(255,255,255,0.3);
+    transform: rotate(45deg); transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* INTERACTION */
+#interaction-zone { text-align: center; padding: 20px; }
+#progress-container { width: 70%; height: 2px; background: #111; margin: 25px auto; overflow: hidden; }
+#progress-bar { width: 0%; height: 100%; background: white; transition: width 0.2s; }
+#sync-btn { font-size: 14px; padding: 20px 50px; border-radius: 0; }
+#atp-timer { display: block; margin-top: 15px; opacity: 0.4; font-size: 12px; }
+
+/* COLLAPSE */
+#collapse-screen {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: black; flex-direction: column; justify-content: center;
+    align-items: center; text-align: center; z-index: 1000;
+}
