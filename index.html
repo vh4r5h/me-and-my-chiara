@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>H+C | THE SINGULARITY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-screen">
+        <div class="login-box">
+            <h1>H+C PROTOCOL</h1>
+            <p class="subtitle">PRIVATE ACCESS ONLY</p>
+            <input type="text" id="username" placeholder="IDENTIFIER" autocomplete="off">
+            <input type="password" id="password" placeholder="ACCESS KEY" autocomplete="off">
+            <button onclick="checkLogin()">INITIATE SYNC</button>
+        </div>
+    </div>
+
+    <div id="main-ui" style="display: none;">
+        <div id="header">
+            <div class="stat">
+                <span class="label">STABILITY COUNTDOWN</span>
+                <span id="timer" class="value">24:00:00</span>
+            </div>
+            <div class="stat">
+                <span class="label">COMPLEXITY LEVEL</span>
+                <span id="streak" class="value">LVL 0</span>
+            </div>
+        </div>
+
+        <div id="monolith-container">
+            <div id="monolith"></div>
+            <div id="pulse-ring"></div>
+        </div>
+
+        <div id="interaction-zone">
+            <p id="status-text">HOST: CHIARA | STATUS: SYNC REQUIRED</p>
+            <div id="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+            <button id="sync-btn" 
+                onmousedown="startSync()" 
+                onmouseup="stopSync()" 
+                ontouchstart="startSync()" 
+                ontouchend="stopSync()">
+                HOLD TO STABILIZE
+            </button>
+            <span id="atp-timer">60s</span>
+        </div>
+    </div>
+
+    <div id="collapse-screen" style="display: none;">
+        <h1>SINGULARITY COLLAPSED</h1>
+        <p>The 24-hour stability window was breached. History purged.</p>
+        <button onclick="restartProtocol()">RE-INITIALIZE CORE</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
